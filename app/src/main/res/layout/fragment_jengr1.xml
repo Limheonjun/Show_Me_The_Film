@@ -3,18 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FF0000"
     android:layout_marginTop="?android:attr/actionBarSize"
-    android:layout_marginBottom="50dp"
-    tools:context=".First">
+    android:layout_marginBottom="50dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:text="임헌준사장" />
+        android:overScrollMode="never"
+        android:background="@android:color/background_light">
+
+    </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>
+

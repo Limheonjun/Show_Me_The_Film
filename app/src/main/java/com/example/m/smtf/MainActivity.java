@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 
-        manager.beginTransaction().add(R.id.fragment_container, new First()).commit();
+        manager.beginTransaction().add(R.id.fragment_container, new Daily_Boxoffice()).commit();
 
         mTextMessage = (TextView) findViewById(R.id.message);
 
@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 int id = menuItem.getItemId();
                 switch (id) {
                     case R.id.navigation1:
+                        manager.beginTransaction().replace(R.id.fragment_container, new Jengr1()).commit();
                         Toast.makeText(MainActivity.this, menuItem.getTitle(), Toast.LENGTH_LONG).show();
                         break;
 
@@ -84,13 +85,13 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
 
                     case R.id.navigation_home:
-                        manager.beginTransaction().replace(R.id.fragment_container, new First()).commit();
+                        manager.beginTransaction().replace(R.id.fragment_container, new Daily_Boxoffice()).commit();
                         return true;
                     case R.id.navigation_dashboard:
-                        manager.beginTransaction().replace(R.id.fragment_container, new Second()).commit();
+                        manager.beginTransaction().replace(R.id.fragment_container, new Weekly_Boxoffice()).commit();
                         return true;
                     case R.id.navigation_notifications:
-                        manager.beginTransaction().replace(R.id.fragment_container, new Third()).commit();
+                        manager.beginTransaction().replace(R.id.fragment_container, new Settings()).commit();
                         return true;
                 }
                 return false;

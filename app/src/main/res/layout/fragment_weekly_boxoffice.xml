@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0000FF"
+    android:background="#00FF00"
     android:layout_marginTop="?android:attr/actionBarSize"
     android:layout_marginBottom="50dp"
-    tools:context=".Third">
+    tools:context=".Weekly_Boxoffice">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -15,6 +15,6 @@
         android:gravity="center"
         android:textSize="20dp"
         android:textStyle="bold"
-        android:text="황정환아주말단사원" />
+        android:text="이동엽부장" />
 
 </LinearLayout>
