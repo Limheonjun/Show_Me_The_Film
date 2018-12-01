@@ -8,10 +8,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.util.Calendar;
 import java.util.List;
 
 import retrofit2.Call;
@@ -26,6 +28,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class Daily_Boxoffice extends Fragment {
 
+    TextView date;
 
     public Daily_Boxoffice() {
         // Required empty public constructor
@@ -42,6 +45,9 @@ public class Daily_Boxoffice extends Fragment {
         ViewGroup rootView = (ViewGroup)inflater.inflate(R.layout.fragment_daily_boxoffice, container, false);
 
         recyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerView);
+
+        date = rootView.findViewById(R.id.clockYear);
+
 
 
         Gson gson = new GsonBuilder().setLenient()
@@ -70,6 +76,7 @@ public class Daily_Boxoffice extends Fragment {
                 List<DailyBoxoffice> fd = response.body();
 
                 Log.i("Log", "Check Data : " + fd.get(0).getMovieNm());
+                date.setText(fd.get(0).getDate());
                 recyclerView.setHasFixedSize(true);
                 adapter = new RecyclerviewAdapterBoxoffice(getActivity(), fd);
                 recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
