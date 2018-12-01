@@ -21,7 +21,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-
+//주간 박스오피스
 /**
  * A simple {@link Fragment} subclass.
  */
