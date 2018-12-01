@@ -64,7 +64,7 @@ public class Info extends AppCompatActivity {
 
                 database = databaseHelper.getWritableDatabase();
 
-                Toast.makeText(getApplication(), "DB :" + databaseName + "이 생성되었습니다.", Toast.LENGTH_SHORT).show();
+
 
             } else if (database != null) {
 
@@ -109,11 +109,6 @@ public class Info extends AppCompatActivity {
                         "major text" +
 
                         ")");
-
-                Toast.makeText(getApplication(), "Table :" + tableName + "이 생성되었습니다.", Toast.LENGTH_SHORT).show();
-
-
-
 
             }
 
@@ -177,3 +172,4 @@ public class Info extends AppCompatActivity {
 
 
 }
+

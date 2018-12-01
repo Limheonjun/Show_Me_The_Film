@@ -6,9 +6,7 @@
 
     android:layout_height="match_parent"
 
-    android:background="#ffffff"
-
-    >
+    android:background="#ffffff">
 
 
 
@@ -25,7 +23,7 @@
 
             android:layout_height="170dp"
 
-            android:src="@drawable/main"/>
+            android:src="@drawable/ic_launcher_foreground"/>
 
     </LinearLayout>
 
@@ -58,7 +56,8 @@
 
                 android:textSize="15dp"
 
-                android:inputType="text"/>
+                android:inputType="text"
+                android:privateImeOptions="defaultInputmode=korean"/>
 
         </TableRow>
 
@@ -118,15 +117,15 @@
 
             <TextView
 
-                android:text="이메일 : "
+                android:text="학번 : "
 
                 android:textSize="20dp"/>
 
             <EditText
 
-                android:id="@+id/email"
+                android:id="@+id/num"
 
-                android:hint="이메일을 입력하세요."
+                android:hint="학번을 입력하세요."
 
                 android:textSize="15dp"
 
@@ -143,24 +142,20 @@
 
             <TextView
 
-                android:text="성별을 선택하세요 : "
+                android:text="학과 : "
 
                 android:textSize="20dp"/>
 
-            <RadioGroup
-                android:orientation="horizontal"
-                android:id="@+id/rGroup1">
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="여성"
-                    android:id="@+id/lady"/>
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="남성"
-                    android:id="@+id/man"/>
-            </RadioGroup>
+            <EditText
+
+                android:id="@+id/major"
+
+                android:hint="학과를 입력하세요."
+
+                android:textSize="15dp"
+
+                android:inputType="text"
+                android:privateImeOptions="defaultInputmode=korean"/>
 
 
 
@@ -177,7 +172,7 @@
 
         android:layout_height="wrap_content">
 
-        <ImageButton
+        <Button
 
             android:id="@+id/join"
 
@@ -187,7 +182,7 @@
 
             android:layout_height="wrap_content"
 
-            android:src="@drawable/endmember"
+            android:text="회원가입"
 
             android:scaleType="centerCrop"
 
@@ -195,38 +190,6 @@
 
     </LinearLayout>
 
-    <LinearLayout
 
-        android:layout_marginBottom="0dp"
-
-        android:orientation="vertical"
-
-        android:layout_width="match_parent"
-
-        android:layout_height="wrap_content"
-
-        android:layout_gravity="center_horizontal">
-
-        <ImageView
-
-
-
-
-            android:id="@+id/botm"
-
-            android:src="@drawable/money"
-
-            android:layout_width="match_parent"
-
-            android:layout_height="wrap_content"
-
-            android:scaleType="centerCrop"
-
-            android:padding="0sp"/>
-
-
-
-
-    </LinearLayout>
 
 </LinearLayout>

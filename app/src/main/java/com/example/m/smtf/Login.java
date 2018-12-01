@@ -1,27 +1,68 @@
 package com.example.m.smtf;
 
 import android.content.Intent;
+
 import android.database.Cursor;
+
 import android.os.Bundle;
+
 import android.view.View;
+
 import android.widget.EditText;
+
 import android.widget.Toast;
+
+
+
+
+
 
 
 public class Login extends Info {
 
-    EditText idText, passText;
-    String Id, Pass;
+
+
+
+    EditText idText;
+
+    EditText passText;
+
+    String Id;
+
+    String Pass;
+
+
+
 
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
 
+
+
+
+        /*if (getIntent().getExtras() == null) {
+
+            startActivity(new Intent(this, MainActivity.class));
+
+        }*/
+
+
+
+
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_login);
 
+
+
+
         idText = (EditText) findViewById(R.id.id);
+
         passText = (EditText) findViewById(R.id.pass);
+
+
+
 
     }
 
@@ -60,9 +101,7 @@ public class Login extends Info {
 
             if (Id.equals(Cnum) && Pass.equals(Cpass)) {
 
-                Intent main = new Intent(getApplication(), Info.class);
-
-                main.putExtra("splash", "splash");
+                Intent main = new Intent(getApplication(), MainActivity.class);
 
                 startActivity(main);
 
@@ -79,8 +118,6 @@ public class Login extends Info {
             }
 
             cursor.close();
-            Intent main = new Intent(getApplication(), MainActivity.class);
-            startActivity(main);
 
         }
 
@@ -94,9 +131,15 @@ public class Login extends Info {
 
     public void member(View view){
 
+
+
+
         Intent member = new Intent(getApplication(), Member.class);
-        member.putExtra("splash", "splash");
+
         startActivity(member);
+
+
+
 
     }
 

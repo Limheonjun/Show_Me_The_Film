@@ -1,11 +1,18 @@
 package com.example.m.smtf;
 
 import android.content.Intent;
+
 import android.database.Cursor;
+
 import android.os.Bundle;
+
 import android.view.View;
+
+import android.widget.Button;
 import android.widget.EditText;
+
 import android.widget.ImageButton;
+
 import android.widget.Toast;
 
 
@@ -20,10 +27,13 @@ public class Member extends Info {
 
 
 
-
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+
+
+
+
         setContentView(R.layout.activity_member);
 
         NAME = (EditText) findViewById(R.id.name);
@@ -32,13 +42,17 @@ public class Member extends Info {
 
         PASSSIGN = (EditText) findViewById(R.id.passsign);
 
+        NUM = (EditText) findViewById(R.id.num);
+
+        MAJOR = (EditText) findViewById(R.id.major);
 
 
 
 
 
 
-        ImageButton join = (ImageButton) findViewById(R.id.join);
+
+        Button join = (Button) findViewById(R.id.join);
 
         join.setOnClickListener(new View.OnClickListener() {
 
@@ -84,19 +98,19 @@ public class Member extends Info {
 
                             Toast.LENGTH_SHORT).show();
 
-                } else if (Tpass.length() <6) {
+                } else if (Tpass.length() <4) {
 
-                    Toast.makeText(getApplicationContext(), "비밀번호를 6자리 이상 입력하세요.",
+                    Toast.makeText(getApplicationContext(), "비밀번호를 4자리 이상 입력하세요.",
 
                             Toast.LENGTH_SHORT).show();
 
-                } else if (Tpasssign.length() <6) {
+                } else if (Tpasssign.length() <4) {
 
                     Toast.makeText(getApplicationContext(), "비밀번호를 입력하세요.",
 
                             Toast.LENGTH_SHORT).show();
 
-                } else if (Tnum.length() <10 || Tname.equals(Cnum)) {
+                } else if (Tnum.length() <5 || Tname.equals(Cnum)) {
 
                     Toast.makeText(getApplicationContext(), "이미 등록된 학번이거나 정확하지 않습니다.",
 
@@ -131,13 +145,17 @@ public class Member extends Info {
 
                     Intent login = new Intent(getApplication(), Login.class);
 
-                    login.putExtra("splash", "splash");
-
                     startActivity(login);
 
                     finish();
 
                     Toast.makeText(getApplication(), Tname + "님 회원가입을 축하합니다.", Toast.LENGTH_SHORT).show();
+
+
+
+
+
+
 
                 }
 

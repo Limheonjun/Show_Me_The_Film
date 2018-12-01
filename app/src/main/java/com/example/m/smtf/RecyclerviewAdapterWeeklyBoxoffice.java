@@ -9,16 +9,17 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import java.util.List;
 
-public class RecyclerviewAdapterBoxoffice extends RecyclerView.Adapter<RecyclerviewAdapterBoxoffice.Holder> {
+public class RecyclerviewAdapterWeeklyBoxoffice extends RecyclerView.Adapter<RecyclerviewAdapterWeeklyBoxoffice.Holder> {
 
     private Context context;
-    private List<DailyBoxoffice> list;
+    private List<WeeklyBoxoffice> list;
 
-
-    public RecyclerviewAdapterBoxoffice(Context context, List<DailyBoxoffice> list) {
+    public RecyclerviewAdapterWeeklyBoxoffice(Context context, List<WeeklyBoxoffice> list) {
         this.context = context;
         this.list = list;
     }
+
+
 
     // ViewHolder 생성
     // row layout을 화면에 뿌려주고 holder에 연결
@@ -35,6 +36,7 @@ public class RecyclerviewAdapterBoxoffice extends RecyclerView.Adapter<Recyclerv
         final int itemposition = position;
         holder.name.setText(list.get(itemposition).movieNm);
         holder.price.setText(list.get(itemposition).openDt);
+
     }
 
     // 몇개의 데이터를 리스트로 뿌려줘야하는지 반드시 정의해줘야한다
@@ -42,6 +44,8 @@ public class RecyclerviewAdapterBoxoffice extends RecyclerView.Adapter<Recyclerv
     public int getItemCount() {
         return list.size(); // RecyclerView의 size return
     }
+
+
 
     // ViewHolder는 하나의 View를 보존하는 역할을 한다
     public class Holder extends RecyclerView.ViewHolder{

@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         manager.beginTransaction().add(R.id.fragment_container, new Daily_Boxoffice()).commit();
 
+
         mTextMessage = (TextView) findViewById(R.id.message);
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
