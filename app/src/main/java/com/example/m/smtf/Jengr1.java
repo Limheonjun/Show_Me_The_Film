@@ -13,6 +13,7 @@ import android.app.Fragment;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -63,10 +64,17 @@ public class Jengr1 extends Fragment {
             public void onResponse(Call<List<FilmDetail>> call, Response<List<FilmDetail>> response) {
                 String test;
                 List<FilmDetail> fd = response.body();
+                List<FilmDetail> dk = new ArrayList<>();
+
+                for(int i=0; i<fd.size(); i++){
+                    if(fd.get(i).repGenreNm.equals("다큐멘터리")){
+                        dk.add(fd.get(i));
+                    }
+                }
 
                 Log.i("Log", "Check Data : " + fd.get(0).getMovieNm());
                 recyclerView.setHasFixedSize(true);
-                adapter = new RecyclerviewAdapter(getActivity(), fd);
+                adapter = new RecyclerviewAdapter(getActivity(), dk);
                 recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
                 recyclerView.setAdapter(adapter);
 

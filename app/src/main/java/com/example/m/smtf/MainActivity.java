@@ -55,18 +55,22 @@ public class MainActivity extends AppCompatActivity {
                         break;
 
                     case R.id.navigation2:
+                        manager.beginTransaction().replace(R.id.fragment_container, new Jengr2()).commit();
                         Toast.makeText(MainActivity.this, menuItem.getTitle(), Toast.LENGTH_LONG).show();
                         break;
 
                     case R.id.navigation3:
+                        manager.beginTransaction().replace(R.id.fragment_container, new Jengr3()).commit();
                         Toast.makeText(MainActivity.this, menuItem.getTitle(), Toast.LENGTH_LONG).show();
                         break;
 
                     case R.id.navigation4:
+                        manager.beginTransaction().replace(R.id.fragment_container, new Jengr4()).commit();
                         Toast.makeText(MainActivity.this, menuItem.getTitle(), Toast.LENGTH_LONG).show();
                         break;
 
                     case R.id.navigation5:
+                        manager.beginTransaction().replace(R.id.fragment_container, new Jengr5()).commit();
                         Toast.makeText(MainActivity.this, menuItem.getTitle(), Toast.LENGTH_LONG).show();
                         break;
 
