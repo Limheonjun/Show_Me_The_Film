@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">smtf</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">일일 박스오피스</string>
+    <string name="title_dashboard">주간 박스오피스</string>
+    <string name="title_notifications">설정</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

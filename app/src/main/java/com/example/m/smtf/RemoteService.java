@@ -19,8 +19,8 @@ public interface RemoteService {
     @GET("/flim_detail")//해당 url로 갔을때 [{p_name:"", p_price:"", p_description:"", p_subclass:"", p_category:"", p_origin:"", p_picture:"", p_link:""}] 식의 데이터를 가져온다는걸 알 수 있음
     Call <List<FilmDetail>> getFlimDetail();//다른 조건사항이 없으니 응답받은 위와 같은 데이터를 아래 제네릭 표현의 Call객체로 저장시킴
 
-//    @GET("/category/{p_category}")//해당 url로 갔을때 [{p_name:"", p_price:"", p_description:"", p_subclass:"", p_category:"", p_origin:"", p_picture:"", p_link:""}] 식의 데이터를 가져온다는걸 알 수 있음
-//    Call <List<product>> getCategory(@Path("p_category") String p_category);
+    @GET("/daily_boxoffice")//해당 url로 갔을때 [{p_name:"", p_price:"", p_description:"", p_subclass:"", p_category:"", p_origin:"", p_picture:"", p_link:""}] 식의 데이터를 가져온다는걸 알 수 있음
+    Call <List<DailyBoxoffice>> getDailyBoxoffice();
 //
 //    @GET("/subclass/{p_subclass}")//해당 url로 갔을때 [{p_name:"", p_price:"", p_description:"", p_subclass:"", p_category:"", p_origin:"", p_picture:"", p_link:""}] 식의 데이터를 가져온다는걸 알 수 있음
 //    Call <List<product>> getSubclass(@Path("p_subclass") String p_subclass);

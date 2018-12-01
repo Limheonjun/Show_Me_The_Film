@@ -1,26 +1,23 @@
 package com.example.m.smtf;
 
-import android.app.Activity;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.List;
 
-public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapter.Holder> {
+public class RecyclerviewAdapterBoxoffice extends RecyclerView.Adapter<RecyclerviewAdapterBoxoffice.Holder> {
 
     private Context context;
-    private List<FilmDetail> list;
+    private List<DailyBoxoffice> list;
 
-    public RecyclerviewAdapter(Context context, List<FilmDetail> list) {
+
+    public RecyclerviewAdapterBoxoffice(Context context, List<DailyBoxoffice> list) {
         this.context = context;
         this.list = list;
     }
-
-
 
     // ViewHolder 생성
     // row layout을 화면에 뿌려주고 holder에 연결
@@ -36,7 +33,7 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
         // 각 위치에 문자열 세팅
         final int itemposition = position;
         holder.name.setText(list.get(itemposition).movieNm);
-        holder.price.setText(list.get(itemposition).prdtYear);
+        holder.price.setText(list.get(itemposition).openDt);
     }
 
     // 몇개의 데이터를 리스트로 뿌려줘야하는지 반드시 정의해줘야한다
