@@ -12,7 +12,7 @@ import android.view.ViewGroup;
  */
 public class Weekly_Boxoffice extends Fragment {
 
- //test
+
     public Weekly_Boxoffice() {
         // Required empty public constructor
     }
