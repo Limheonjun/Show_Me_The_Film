@@ -1,5 +1,8 @@
 package com.example.m.smtf;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 
 import android.database.Cursor;
@@ -31,7 +34,7 @@ public class Member extends Info {
 
         super.onCreate(savedInstanceState);
 
-
+        final Context context = this;
 
 
         setContentView(R.layout.activity_member);
@@ -142,14 +145,49 @@ public class Member extends Info {
                         e.printStackTrace();
 
                     }
+                    switch (v.getId()){
+                        case  R.id.join:
+                            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
 
-                    Intent login = new Intent(getApplication(), Login.class);
+                            alertDialogBuilder.setTitle("회원가입");
+
+                            alertDialogBuilder.setMessage("회원가입에 동의 하십니까?")
+                                    .setCancelable(false)
+                                    .setPositiveButton("동의", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int i) {
+                                            Intent login = new Intent(getApplication(), Login.class);
+
+                                            startActivity(login);
+
+                                            finish();
+
+                                            Toast.makeText(getApplication(), Tname + "님 회원가입을 축하합니다.", Toast.LENGTH_SHORT).show();
+                                        }
+                                    })
+                                    .setNegativeButton("취소", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int i) {
+                                            dialogInterface.cancel();
+                                        }
+                                    });
+                            AlertDialog alertDialog = alertDialogBuilder.create();
+
+                            // 다이얼로그 보여주기
+                            alertDialog.show();
+                            break;
+
+                        default:
+                            break;
+
+                    }
+                    /*Intent login = new Intent(getApplication(), Login.class);
 
                     startActivity(login);
 
                     finish();
 
-                    Toast.makeText(getApplication(), Tname + "님 회원가입을 축하합니다.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplication(), Tname + "님 회원가입을 축하합니다.", Toast.LENGTH_SHORT).show();*/
 
 
 
