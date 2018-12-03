@@ -1,14 +1,32 @@
 package com.example.m.smtf;
 
 public class DailyBoxoffice {
-    String movieNm;
-    String openDt;
-    String salesAmt;
-    String audiCnt;
-    String date;
-    String rank;
-    String rankOldAndNew;
-    String audiAcc;
+    String movieNm;             //영화명
+    String openDt;              //영화 개봉일
+    String salesAmt;            //오늘 매출액
+    String audiCnt;             //오늘 관객수
+    String date;                //박스오피스 조회일자
+    String rank;                //오늘 박스오피스 순위
+    String rankOldAndNew;      //랭킹 신규진입여부
+    String audiAcc;             //누적관객수
+    String repNationNm;
+    String repGenreNm;
+
+    public String getRepNationNm() {
+        return repNationNm;
+    }
+
+    public void setRepNationNm(String repNationNm) {
+        this.repNationNm = repNationNm;
+    }
+
+    public String getRepGenreNm() {
+        return repGenreNm;
+    }
+
+    public void setRepGenreNm(String repGenreNm) {
+        this.repGenreNm = repGenreNm;
+    }
 
     public String getDate() {
         return date;

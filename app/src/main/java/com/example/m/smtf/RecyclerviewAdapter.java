@@ -17,6 +17,8 @@ public class RecyclerviewAdapter extends RecyclerView.Adapter<RecyclerviewAdapte
     public RecyclerviewAdapter(Context context, List<FilmDetail> list) {
         this.context = context;
         this.list = list;
+
+
     }
 
 

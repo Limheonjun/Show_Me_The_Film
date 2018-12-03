@@ -21,11 +21,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".webview" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Member" />
         <activity android:name=".Login" />
         <activity android:name=".F_Detail" />
-        <activity android:name=".webview"></activity>
+        <activity android:name=".webview" />
+        <activity android:name=".Daily_boxdetail"></activity>
     </application>
 
 </manifest>
