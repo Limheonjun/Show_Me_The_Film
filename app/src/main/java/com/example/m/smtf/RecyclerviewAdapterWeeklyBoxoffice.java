@@ -31,6 +31,7 @@ public class RecyclerviewAdapterWeeklyBoxoffice extends RecyclerView.Adapter<Rec
 
     // ViewHolder 생성
     // row layout을 화면에 뿌려주고 holder에 연결
+    // test
     @Override
     public Holder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_fd, parent, false);
