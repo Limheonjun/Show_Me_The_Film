@@ -65,17 +65,12 @@ public class RecyclerviewAdapterWeeklyBoxoffice extends RecyclerView.Adapter<Rec
 
         public Holder(View view){
             super(view);
-<<<<<<< HEAD
 
             click = (LinearLayout)view.findViewById(R.id.click);
             name = (TextView) view.findViewById(R.id.id);
             price = (TextView) view.findViewById(R.id.content);
-
-
-=======
             name = (TextView) view.findViewById(R.id.movieNm);
             price = (TextView) view.findViewById(R.id.openDt);
->>>>>>> b7dfd1ba8701fbfc9847368c475432a4acf0b510
         }
     }
 }
