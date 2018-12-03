@@ -31,6 +31,7 @@ public class RecyclerviewAdapterWeeklyBoxoffice extends RecyclerView.Adapter<Rec
 
     // ViewHolder 생성
     // row layout을 화면에 뿌려주고 holder에 연결
+    // test
     @Override
     public Holder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_fd, parent, false);
@@ -65,17 +66,25 @@ public class RecyclerviewAdapterWeeklyBoxoffice extends RecyclerView.Adapter<Rec
 
         public Holder(View view){
             super(view);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 59b4664eddab8ff67917063ebe54287cf97a239b
 
             click = (LinearLayout)view.findViewById(R.id.click);
             name = (TextView) view.findViewById(R.id.id);
             price = (TextView) view.findViewById(R.id.content);
+<<<<<<< HEAD
 
 
 
             name = (TextView) view.findViewById(R.id.movieNm);
             price = (TextView) view.findViewById(R.id.openDt);
 
+=======
+            name = (TextView) view.findViewById(R.id.movieNm);
+            price = (TextView) view.findViewById(R.id.openDt);
+>>>>>>> 59b4664eddab8ff67917063ebe54287cf97a239b
         }
     }
 }

@@ -23,15 +23,21 @@
         </activity>
         <activity android:name=".webview" />
         <activity android:name=".MainActivity" />
+<<<<<<< HEAD
 
         <activity android:name=".Member"></activity>
 
         <activity android:name=".Member" />
+=======
+        <activity android:name=".Member"/>
+>>>>>>> 59b4664eddab8ff67917063ebe54287cf97a239b
         <activity android:name=".Login" />
         <activity android:name=".F_Detail" />
-        <activity android:name=".webview" />
         <activity android:name=".Daily_boxdetail"></activity>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 59b4664eddab8ff67917063ebe54287cf97a239b
     </application>
 
 </manifest>
