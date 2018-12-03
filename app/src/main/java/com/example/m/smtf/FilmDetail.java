@@ -1,21 +1,21 @@
 package com.example.m.smtf;
 
 public class FilmDetail {
-    String meNmEn;
-    String prdtYear;
-    String openDt;
-    String typovieNm;
-    String movieNm;
-    String prdtStatNm;
-    String repNationNm;
-    String repGenreNm;
+    String movieNmEn;
+    String prdtYear; // 제작년도
+    String openDt; // 개봉년도
+    String typeNm; // 영화유형
+    String movieNm; // 영화명
+    String prdtStatNm; // 제작상태
+    String repNationNm; // 대표제작국가
+    String repGenreNm; // 대표장르명
 
     public String getMeNmEn() {
-        return meNmEn;
+        return movieNmEn;
     }
 
     public void setMeNmEn(String meNmEn) {
-        this.meNmEn = meNmEn;
+        this.movieNmEn = meNmEn;
     }
 
     public String getPrdtYear() {
@@ -35,11 +35,11 @@ public class FilmDetail {
     }
 
     public String getTypovieNm() {
-        return typovieNm;
+        return typeNm;
     }
 
     public void setTypovieNm(String typovieNm) {
-        this.typovieNm = typovieNm;
+        this.typeNm = typovieNm;
     }
 
     public String getMovieNm() {

@@ -24,6 +24,8 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".Member" />
         <activity android:name=".Login" />
+        <activity android:name=".F_Detail" />
+        <activity android:name=".webview"></activity>
     </application>
 
 </manifest>

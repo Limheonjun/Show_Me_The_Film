@@ -1,6 +1,5 @@
 package com.example.m.smtf;
 
-import android.app.Activity;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -25,7 +24,7 @@ public class RecyclerviewAdapterWeeklyBoxoffice extends RecyclerView.Adapter<Rec
     // row layout을 화면에 뿌려주고 holder에 연결
     @Override
     public Holder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_fd, parent, false);
         Holder holder = new Holder(view);
         return holder;
     }
@@ -54,8 +53,8 @@ public class RecyclerviewAdapterWeeklyBoxoffice extends RecyclerView.Adapter<Rec
 
         public Holder(View view){
             super(view);
-            name = (TextView) view.findViewById(R.id.id);
-            price = (TextView) view.findViewById(R.id.content);
+            name = (TextView) view.findViewById(R.id.movieNm);
+            price = (TextView) view.findViewById(R.id.openDt);
         }
     }
 }
