@@ -25,6 +25,8 @@ import android.widget.Toast;
 public class Settings extends Fragment {
     Button btn;
     TextView idlogin;
+    TextView nums;
+    TextView majors;
 
     Info n = new Info();
 
@@ -40,14 +42,16 @@ public class Settings extends Fragment {
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
 
 
-        idlogin = (TextView) view.findViewById(R.id.Loginis);
+        idlogin = (TextView) view.findViewById(R.id.names);
+        nums = (TextView) view.findViewById(R.id.nums);
+        majors = (TextView) view.findViewById(R.id.majors);
 
         btn = (Button) view.findViewById(R.id.bt_search);
         n.databaseHelper = new Info.CustomerDatabaseHelper(getActivity(), n.databaseName, null, 1);
         n.database = n.databaseHelper.getWritableDatabase();
         if (n.database != null) {
 
-            Cursor cursor = n.database.rawQuery("SELECT name, num, pass FROM " + n.tableName, null);
+            Cursor cursor = n.database.rawQuery("SELECT name, num, pass, major FROM " + n.tableName, null);
 
             int count = cursor.getCount();
 
@@ -62,11 +66,15 @@ public class Settings extends Fragment {
 
                 n.Cpass = cursor.getString(2);
 
+                n.Cmajor = cursor.getString(3);
+
             }
 
             String Id = idlogin.getText().toString();
 
-            idlogin.setText("아이디는 "+n.Cnum+" 입니다");
+            idlogin.setText("아이디 : "+n.Cnum);
+            nums.setText(n.Cname+"님 환영합니다. ");
+            majors.setText("학과는 : "+ n.Cmajor);
         }
 
 
