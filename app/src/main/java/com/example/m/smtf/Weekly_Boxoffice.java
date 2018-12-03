@@ -1,5 +1,7 @@
 package com.example.m.smtf;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -25,17 +27,19 @@ import retrofit2.converter.gson.GsonConverterFactory;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Weekly_Boxoffice extends Fragment {
+public class Weekly_Boxoffice extends Fragment  {
 
 
-    public Weekly_Boxoffice() {
-        // Required empty public constructor
-    }
+
 
     private RecyclerView recyclerView;
 
     private RecyclerviewAdapterWeeklyBoxoffice adapter;
 
+
+    public Weekly_Boxoffice() {
+        // Required empty public constructor
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -68,12 +72,16 @@ public class Weekly_Boxoffice extends Fragment {
                 String test;
                 List<WeeklyBoxoffice> fd = response.body();
 
+                String Name
 
+               ;
                 Log.i("Log", "Check Data : " + fd.get(0).getMovieNm());
                 recyclerView.setHasFixedSize(true);
                 adapter = new RecyclerviewAdapterWeeklyBoxoffice(getActivity(), fd);
                 recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
                 recyclerView.setAdapter(adapter);
+
+
 
             }
 
@@ -85,6 +93,7 @@ public class Weekly_Boxoffice extends Fragment {
 
         return rootView;
     }
+
 
 }
 

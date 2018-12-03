@@ -1,14 +1,14 @@
 package com.example.m.smtf;
 
 public class WeeklyBoxoffice {
-    String movieNm;
-    String openDt;
-    String salesAmt;
-    String audiCnt;
+    String movieNm; //영화제목
+    String openDt; // 영화개봉일
+    String salesAmt; //해당일 매출액
+    String audiCnt; // 해당일 관객수
     String date;
-    String rank;
-    String rankOldAndNew;
-    String audiAcc;
+    String rank; // 랭킹
+    String rankOldAndNew; //랭킹신규진입여부
+    String audiAcc; // 누적관객수
 
     public String getMovieNm() {
         return movieNm;

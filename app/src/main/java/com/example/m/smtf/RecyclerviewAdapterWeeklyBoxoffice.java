@@ -2,17 +2,26 @@ package com.example.m.smtf;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.List;
 
 public class RecyclerviewAdapterWeeklyBoxoffice extends RecyclerView.Adapter<RecyclerviewAdapterWeeklyBoxoffice.Holder> {
 
+
     private Context context;
     private List<WeeklyBoxoffice> list;
+
+
+
+
 
     public RecyclerviewAdapterWeeklyBoxoffice(Context context, List<WeeklyBoxoffice> list) {
         this.context = context;
@@ -37,6 +46,8 @@ public class RecyclerviewAdapterWeeklyBoxoffice extends RecyclerView.Adapter<Rec
         holder.name.setText(list.get(itemposition).movieNm);
         holder.price.setText(list.get(itemposition).openDt);
 
+
+
     }
 
     // 몇개의 데이터를 리스트로 뿌려줘야하는지 반드시 정의해줘야한다
@@ -51,11 +62,16 @@ public class RecyclerviewAdapterWeeklyBoxoffice extends RecyclerView.Adapter<Rec
     public class Holder extends RecyclerView.ViewHolder{
         public TextView name;
         public TextView price;
+        public LinearLayout click;
 
         public Holder(View view){
             super(view);
+
+            click = (LinearLayout)view.findViewById(R.id.click);
             name = (TextView) view.findViewById(R.id.id);
             price = (TextView) view.findViewById(R.id.content);
+
+
         }
     }
 }

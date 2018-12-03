@@ -24,6 +24,8 @@ public interface RemoteService {
 
     @GET("/weekly_boxoffice")
     Call<List<WeeklyBoxoffice>> getWeeklyBoxoffice();
+
+
 //
 //    @GET("/subclass/{p_subclass}")//해당 url로 갔을때 [{p_name:"", p_price:"", p_description:"", p_subclass:"", p_category:"", p_origin:"", p_picture:"", p_link:""}] 식의 데이터를 가져온다는걸 알 수 있음
 //    Call <List<product>> getSubclass(@Path("p_subclass") String p_subclass);

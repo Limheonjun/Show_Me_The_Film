@@ -36,7 +36,57 @@ public class Info extends AppCompatActivity {
     String Cmajor;
 
 
+Info(){
 
+    try
+
+
+
+
+    {
+
+        if (database == null) {
+
+            //  database = openOrCreateDatabase(databaseName, Context.MODE_PRIVATE, null);
+
+            databaseHelper = new CustomerDatabaseHelper(getApplicationContext(), databaseName, null, 1);
+
+            database = databaseHelper.getWritableDatabase();
+
+        } else if (database != null) {
+
+            Toast.makeText(getApplication(), "이미 디비열렸음", Toast.LENGTH_SHORT).show();
+        }
+    } catch (
+            Exception e
+            )
+    {
+        e.printStackTrace();
+    }
+    try {
+
+        if (database != null) {
+
+            database.execSQL("CREATE TABLE if not exists " + tableName + "(" +
+
+                    "_id integer PRIMARY KEY autoincrement," +
+
+                    "name text," +
+
+                    "pass text," +
+
+                    "passCheck text," +
+
+                    "num text," +
+
+                    "major text" +
+
+                    ")");
+        }
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
 
     @Override
 
@@ -126,7 +176,7 @@ public class Info extends AppCompatActivity {
 
     }
 
-    class CustomerDatabaseHelper extends SQLiteOpenHelper {
+    static class CustomerDatabaseHelper extends SQLiteOpenHelper {
 
         CustomerDatabaseHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
 

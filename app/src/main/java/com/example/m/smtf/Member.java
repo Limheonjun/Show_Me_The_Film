@@ -200,7 +200,8 @@ public class Member extends Info {
 
 
 
-            } });
+            }
+        });
 
     }
 
