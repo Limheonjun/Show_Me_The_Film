@@ -27,7 +27,7 @@
 
         android:layout_height="200dp"
 
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="50dp"
 
         android:layout_marginBottom="25dp">
 
@@ -40,7 +40,7 @@
 
             android:layout_height="wrap_content"
 
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/splash"
 
             android:id="@+id/imageView" />
 
@@ -57,7 +57,9 @@
 
         android:layout_width="match_parent"
 
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="30dp">
 
         <EditText
 
