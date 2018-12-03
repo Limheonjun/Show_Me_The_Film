@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="horizontal"
+    android:layout_margin="10dp"
+    android:background="#EAEAEA">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/movieNm"
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:layout_margin="10dp"
+            android:text="영화명 :"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="25dp" />
+
+
+        <TextView
+            android:id="@+id/openDt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:foregroundGravity="left"
+            android:gravity="left"
+            android:text="개봉일자 :"
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/repNationNm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:foregroundGravity="left"
+            android:gravity="left"
+            android:text="제작국가 : "
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/repGenreNm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="10dp"
+            android:foregroundGravity="left"
+            android:gravity="left"
+            android:text="장르 : "
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
