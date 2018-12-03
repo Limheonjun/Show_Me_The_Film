@@ -5,20 +5,25 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/navigation1"
+            android:icon="@drawable/sentiment_very_dissatisfied"
             android:title="다큐멘터리" />
         <!-- android:icon="@drawable/ic_meat" -->
 
         <item
             android:id="@+id/navigation2"
+            android:icon="@drawable/mood_black"
             android:title="코미디" />
         <item
             android:id="@+id/navigation3"
+            android:icon="@drawable/sentiment_dissatisfied"
             android:title="액션" />
         <item
             android:id="@+id/navigation4"
+            android:icon="@drawable/sentiment_satisfied"
             android:title="애니메이션" />
         <item
             android:id="@+id/navigation5"
+            android:icon="@drawable/mood_bad_black"
             android:title="공포(호러)" />
     </group>
 
